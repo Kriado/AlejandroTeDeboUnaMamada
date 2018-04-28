@@ -85,7 +85,7 @@
                             <tbody>
                                 <tr>
                                     <td><a href="controller.jsp?op=eliminar&correo=<%=peti.getCorreo()%>" class="waves-effect waves-light btn red"><i class="material-icons">cancel</i>button</a></td>
-                                    <td><button onclick="$('#modal1').modal('open');"><i class="material-icons ">check</i></button></td>
+                                    <td><button id="putoDiego"><i class="material-icons ">check</i></button></td>
                                     <td><%=peti.getNombre()%></td>
                                     <td><%=peti.getApellido1()%></td>
                                     <td><%=peti.getApellido2()%></td>
@@ -132,5 +132,14 @@
 
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript" src="js/myjs.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                 $("#putoDiego").on("click", function(){
+                     $('#modal1').modal('open');
+                 });
+            }
+            
+        </script>
     </body>
 </html>
